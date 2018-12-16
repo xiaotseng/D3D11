@@ -1,7 +1,8 @@
-#include <Windows.h>
+﻿#include <Windows.h>
 #include "D3DINIT.h"
 #include <comutil.h>
 #include <dxgi.h>
+#include <assert.h>
 #if  defined(DEBUG)||defined(_DEBUG)
 #define createDeviceFlags  D3D11_CREATE_DEVICE_DEBUG
 #else 
@@ -41,17 +42,17 @@ bool  D3DINIT::initD3D(HWND hw)
 	);
 	if (FAILED(h))
 	{
-		MessageBox(nullptr, "fefefef", "biaoti", 0);
+		MessageBox(nullptr, "D3D初始化失败", "失败", 0);
 		return false;
 	}
 	else if (FeatrueLevel < D3D_FEATURE_LEVEL_11_0)
 	{
-		MessageBox(nullptr, "fefefef", "biaoti", 0);
+		MessageBox(nullptr, "D3D版本太低", "警告", 0);
 		return false;
 	}
 	else
 	{
-		const char* c = "D3D中文";
+		const char* c = "D3D初始化成功";
 		const char* t = "成功";
 		MessageBox(nullptr, c, t, 0);
 	}

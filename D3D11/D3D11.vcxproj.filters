@@ -21,9 +21,15 @@
     <ClCompile Include="D3DINIT.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="FrameWork.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D3DINIT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
